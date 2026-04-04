@@ -1,0 +1,119 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f4ff;
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: #4a90d9;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.home-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-inline-end: 12px;
+}
+
+.home-button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.home-icon {
+  font-size: 20px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.lang-toggle-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding: 6px 14px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.layout-content {
+  flex: 1;
+  padding: 16px;
+}
+
+/* Landscape — compact header to save vertical space */
+@media (orientation: landscape) and (max-height: 600px) {
+  .layout-header {
+    padding: 6px 16px;
+  }
+
+  .app-title {
+    font-size: 18px;
+  }
+
+  .home-button {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+
+  .layout-content {
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .layout-header {
+    padding: 10px 12px;
+  }
+
+  .app-title {
+    font-size: 18px;
+  }
+
+  .home-button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .lang-toggle-btn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .home-label {
+    display: none;
+  }
+
+  .layout-content {
+    padding: 12px;
+  }
+}

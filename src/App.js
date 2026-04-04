@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { LanguageProvider } from './i18n/LanguageContext';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import GamePage from './pages/GamePage';
+import MemoryGame from './games/memory/MemoryGame';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="games/memory" element={<MemoryGame />} />
+            <Route path="games/:gameId" element={<GamePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 

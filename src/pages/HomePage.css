@@ -1,0 +1,80 @@
+.home-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-greeting {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin: 8px 0 24px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tablet landscape — use horizontal space, show all games in one row or two */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .home-page {
+    max-width: 100%;
+  }
+
+  .home-greeting {
+    font-size: 22px;
+    margin: 4px 0 12px;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    max-width: 80vh;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .home-greeting {
+    font-size: 24px;
+    margin: 4px 0 16px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+  .home-page {
+    max-width: 100%;
+  }
+
+  .home-greeting {
+    font-size: 18px;
+    margin: 2px 0 8px;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 70vh;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .home-greeting {
+    font-size: 20px;
+    margin: 4px 0 12px;
+  }
+}

@@ -1,0 +1,423 @@
+.memory-game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.memory-game h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.memory-subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* Difficulty selection */
+.difficulty-select {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.diff-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.diff-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.diff-easy { background: #4caf50; }
+.diff-medium { background: #ff9800; }
+.diff-hard { background: #f44336; }
+
+.diff-label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.diff-info {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.diff-best {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* Game header */
+.memory-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.memory-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.restart-btn {
+  background: #4a90d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.restart-btn:hover {
+  background: #3a7bc8;
+}
+
+/* Win banner */
+.win-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #4caf50;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.win-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.new-record {
+  background: #ffeb3b;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.play-again-btn {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.play-again-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Board */
+.memory-board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+.memory-board.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Cards */
+.memory-card {
+  aspect-ratio: 1;
+  perspective: 600px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.memory-card.matched {
+  cursor: default;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-emoji {
+  font-size: 40px;
+}
+
+.memory-card.matched .card-back {
+  background: #e8f5e9;
+  box-shadow: 0 0 0 3px #4caf50;
+}
+
+/* Tablet landscape — maximize horizontal space, conserve vertical */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .memory-game {
+    max-width: 80vh;
+  }
+
+  .memory-game h2 {
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+  .memory-subtitle {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .memory-header {
+    margin-bottom: 10px;
+  }
+
+  .memory-board {
+    gap: 8px;
+  }
+
+  .memory-card {
+    aspect-ratio: 1;
+  }
+
+  .card-emoji {
+    font-size: 5vh;
+  }
+
+  .card-front {
+    font-size: 3.5vh;
+  }
+
+  .win-banner {
+    padding: 8px 16px;
+    margin-bottom: 10px;
+  }
+
+  .difficulty-select {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .diff-btn {
+    flex: 1;
+    padding: 12px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .memory-game {
+    max-width: 450px;
+  }
+
+  .memory-board {
+    gap: 8px;
+  }
+
+  .card-emoji {
+    font-size: 34px;
+  }
+
+  .card-front {
+    font-size: 24px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+  .memory-game {
+    max-width: 70vh;
+  }
+
+  .memory-game h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .memory-subtitle {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .memory-header {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .memory-stat {
+    padding: 4px 10px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .restart-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .memory-board {
+    gap: 5px;
+  }
+
+  .card-emoji {
+    font-size: 4vh;
+  }
+
+  .card-front {
+    font-size: 3vh;
+  }
+
+  .win-banner {
+    padding: 6px 12px;
+    margin-bottom: 6px;
+  }
+
+  .win-text {
+    font-size: 14px;
+  }
+
+  .difficulty-select {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .diff-btn {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .memory-game {
+    max-width: 100%;
+  }
+
+  .memory-game h2 {
+    font-size: 22px;
+  }
+
+  .memory-header {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .memory-stat {
+    padding: 6px 12px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .restart-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .memory-board {
+    gap: 6px;
+  }
+
+  .card-emoji {
+    font-size: 28px;
+  }
+
+  .card-front {
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .card-back {
+    border-radius: 8px;
+  }
+
+  .win-banner {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .win-text {
+    font-size: 15px;
+  }
+}
