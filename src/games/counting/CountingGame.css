@@ -1,0 +1,358 @@
+.counting-game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.counting-game h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.counting-subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Start screen */
+.counting-start-info {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 16px;
+}
+
+.counting-best {
+  color: #4a90d9;
+  font-weight: 600;
+}
+
+.counting-start-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.counting-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header stats */
+.counting-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.counting-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counting-stat .stat-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.counting-stat .stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Question area */
+.counting-question {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counting-prompt {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.counting-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  min-height: 60px;
+}
+
+.counting-emoji {
+  font-size: 48px;
+  animation: popIn 0.3s ease-out both;
+}
+
+.counting-emoji:nth-child(1) { animation-delay: 0s; }
+.counting-emoji:nth-child(2) { animation-delay: 0.05s; }
+.counting-emoji:nth-child(3) { animation-delay: 0.1s; }
+.counting-emoji:nth-child(4) { animation-delay: 0.15s; }
+.counting-emoji:nth-child(5) { animation-delay: 0.2s; }
+.counting-emoji:nth-child(6) { animation-delay: 0.25s; }
+.counting-emoji:nth-child(7) { animation-delay: 0.3s; }
+.counting-emoji:nth-child(8) { animation-delay: 0.35s; }
+.counting-emoji:nth-child(9) { animation-delay: 0.4s; }
+.counting-emoji:nth-child(10) { animation-delay: 0.45s; }
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Answer options */
+.counting-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.counting-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: white;
+  border: 3px solid #ddd;
+  border-radius: 14px;
+  padding: 16px 12px;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.counting-option:hover:not(:disabled) {
+  border-color: #4a90d9;
+  transform: translateY(-2px);
+}
+
+.counting-option.correct {
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.counting-option.wrong {
+  background: #ffebee;
+  border-color: #f44336;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.option-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: #333;
+}
+
+.option-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.counting-option.correct .option-number {
+  color: #2e7d32;
+}
+
+.counting-option.wrong .option-number {
+  color: #c62828;
+}
+
+.try-again {
+  color: #f44336;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Win screen */
+.counting-win {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counting-score {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.new-record-badge {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #333;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .counting-game {
+    max-width: 80vh;
+  }
+
+  .counting-game h2 {
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+  .counting-subtitle {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .counting-question {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .counting-prompt {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .counting-emoji {
+    font-size: 5vh;
+  }
+
+  .counting-items {
+    gap: 8px;
+  }
+
+  .counting-options {
+    gap: 8px;
+  }
+
+  .counting-option {
+    padding: 10px 8px;
+  }
+
+  .option-number {
+    font-size: 22px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+  .counting-game {
+    max-width: 70vh;
+  }
+
+  .counting-game h2 {
+    font-size: 18px;
+  }
+
+  .counting-header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .counting-stat {
+    padding: 4px 10px;
+  }
+
+  .counting-emoji {
+    font-size: 4vh;
+  }
+
+  .counting-question {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .counting-prompt {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .counting-option {
+    padding: 8px 6px;
+  }
+
+  .option-number {
+    font-size: 18px;
+  }
+
+  .option-label {
+    font-size: 12px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .counting-game {
+    max-width: 450px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .counting-game {
+    max-width: 100%;
+  }
+
+  .counting-game h2 {
+    font-size: 22px;
+  }
+
+  .counting-emoji {
+    font-size: 36px;
+  }
+
+  .counting-items {
+    gap: 8px;
+  }
+
+  .counting-question {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .counting-prompt {
+    font-size: 17px;
+  }
+
+  .counting-options {
+    gap: 10px;
+  }
+
+  .counting-option {
+    padding: 12px 8px;
+  }
+
+  .option-number {
+    font-size: 24px;
+  }
+}

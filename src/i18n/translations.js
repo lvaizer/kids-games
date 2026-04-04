@@ -15,6 +15,7 @@ const translations = {
     'game.memory': 'משחק זיכרון',
     'game.puzzle': 'פאזל',
     'game.coloring': 'צביעה',
+    'game.counting': 'כמה יש?',
     'game.math': 'חידון חשבון',
     'game.spelling': 'איות',
     'game.matching': 'התאמה',
@@ -35,6 +36,20 @@ const translations = {
     'memory.newRecord': 'שיא חדש!',
     'memory.playAgain': 'שחקו שוב',
 
+    // Counting game
+    'counting.title': 'כמה יש?',
+    'counting.subtitle': 'ספרו את החיות ובחרו את התשובה הנכונה!',
+    'counting.roundsInfo': '10 סיבובים',
+    'counting.start': 'התחילו!',
+    'counting.round': 'סיבוב',
+    'counting.mistakesLabel': 'טעויות',
+    'counting.mistakesWord': 'טעויות',
+    'counting.howMany': 'כמה יש?',
+    'counting.tryAgain': 'לא נכון, נסו שוב!',
+    'counting.finished': 'כל הכבוד!',
+    'counting.totalMistakes': 'סך טעויות',
+    'counting.bestScore': 'שיא',
+
     // Animals
     'animal.Dog': 'כלב',
     'animal.Cat': 'חתול',
@@ -48,6 +63,8 @@ const translations = {
     'animal.Unicorn': 'חד קרן',
     'animal.Penguin': 'פינגווין',
     'animal.Butterfly': 'פרפר',
+    'animal.Turtle': 'צב',
+    'animal.Octopus': 'תמנון',
   },
   en: {
     // Layout
@@ -65,6 +82,7 @@ const translations = {
     'game.memory': 'Memory Game',
     'game.puzzle': 'Puzzle',
     'game.coloring': 'Coloring',
+    'game.counting': 'How Many?',
     'game.math': 'Math Quiz',
     'game.spelling': 'Spelling',
     'game.matching': 'Matching',
@@ -85,6 +103,20 @@ const translations = {
     'memory.newRecord': 'New Record!',
     'memory.playAgain': 'Play Again',
 
+    // Counting game
+    'counting.title': 'How Many?',
+    'counting.subtitle': 'Count the animals and pick the right answer!',
+    'counting.roundsInfo': '10 rounds',
+    'counting.start': 'Start!',
+    'counting.round': 'Round',
+    'counting.mistakesLabel': 'Mistakes',
+    'counting.mistakesWord': 'mistakes',
+    'counting.howMany': 'How many are there?',
+    'counting.tryAgain': 'Not right, try again!',
+    'counting.finished': 'Great job!',
+    'counting.totalMistakes': 'Total mistakes',
+    'counting.bestScore': 'Best',
+
     // Animals
     'animal.Dog': 'Dog',
     'animal.Cat': 'Cat',
@@ -98,6 +130,8 @@ const translations = {
     'animal.Unicorn': 'Unicorn',
     'animal.Penguin': 'Penguin',
     'animal.Butterfly': 'Butterfly',
+    'animal.Turtle': 'Turtle',
+    'animal.Octopus': 'Octopus',
   },
 };
 

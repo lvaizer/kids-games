@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { wonMessage } from '../../i18n/translations';
-import { playCheer } from '../../hooks/useSound';
+import { playCheer, playSuccess } from '../../hooks/useSound';
 import './MemoryGame.css';
 
 const ANIMALS = [
@@ -94,6 +94,7 @@ function MemoryGame() {
       const second = cards.find((c) => c.id === secondId);
 
       if (first.animal.nameKey === second.animal.nameKey) {
+        playSuccess();
         setCards((prev) =>
           prev.map((c) =>
             c.id === firstId || c.id === secondId ? { ...c, matched: true } : c
