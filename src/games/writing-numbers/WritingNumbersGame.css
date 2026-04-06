@@ -1,0 +1,267 @@
+.writing-numbers-game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.writing-numbers-game h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.wn-subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Start screen */
+.wn-start-info {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 16px;
+}
+
+.wn-best {
+  color: #4a90d9;
+  font-weight: 600;
+}
+
+.wn-start-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wn-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header stats */
+.wn-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.wn-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wn-stat .stat-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.wn-stat .stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Big number display */
+.wn-question {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wn-big-number {
+  font-size: 120px;
+  font-weight: 800;
+  color: #4a90d9;
+  line-height: 1;
+}
+
+/* Answer options */
+.wn-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.wn-option {
+  background: white;
+  border: 3px solid #ddd;
+  border-radius: 14px;
+  padding: 16px 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.wn-option:hover:not(:disabled) {
+  border-color: #4a90d9;
+  transform: translateY(-2px);
+}
+
+.wn-option.correct {
+  background: #e8f5e9;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.wn-option.wrong {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #c62828;
+  animation: wnShake 0.4s ease-in-out;
+}
+
+@keyframes wnShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.wn-try-again {
+  color: #f44336;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Win screen */
+.wn-win {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wn-score {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.new-record-badge {
+  display: inline-block;
+  background: #ffeb3b;
+  color: #333;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .writing-numbers-game {
+    max-width: 80vh;
+  }
+
+  .writing-numbers-game h2 {
+    font-size: 22px;
+    margin-bottom: 2px;
+  }
+
+  .wn-subtitle {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .wn-question {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .wn-big-number {
+    font-size: 12vh;
+  }
+
+  .wn-option {
+    padding: 12px 10px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+  .writing-numbers-game {
+    max-width: 70vh;
+  }
+
+  .writing-numbers-game h2 {
+    font-size: 18px;
+  }
+
+  .wn-header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .wn-stat {
+    padding: 4px 10px;
+  }
+
+  .wn-question {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .wn-big-number {
+    font-size: 10vh;
+  }
+
+  .wn-option {
+    padding: 8px 6px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) and (orientation: portrait) {
+  .writing-numbers-game {
+    max-width: 450px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) and (orientation: portrait) {
+  .writing-numbers-game {
+    max-width: 100%;
+  }
+
+  .writing-numbers-game h2 {
+    font-size: 22px;
+  }
+
+  .wn-big-number {
+    font-size: 80px;
+  }
+
+  .wn-question {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .wn-option {
+    padding: 14px 10px;
+    font-size: 18px;
+  }
+}

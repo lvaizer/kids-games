@@ -36,6 +36,12 @@ const translations = {
     'memory.newRecord': 'שיא חדש!',
     'memory.playAgain': 'שחקו שוב',
 
+    // Writing numbers game
+    'game.writingNumbers': 'כתיבת מספרים',
+    'writingNumbers.title': 'כתיבת מספרים',
+    'writingNumbers.subtitle': 'איך כותבים את המספר במילים?',
+    'writingNumbers.roundsInfo': '10 סיבובים',
+
     // Counting game
     'counting.title': 'כמה יש?',
     'counting.subtitle': 'ספרו את החיות ובחרו את התשובה הנכונה!',
@@ -102,6 +108,12 @@ const translations = {
     'memory.restart': 'Restart',
     'memory.newRecord': 'New Record!',
     'memory.playAgain': 'Play Again',
+
+    // Writing numbers game
+    'game.writingNumbers': 'Writing Numbers',
+    'writingNumbers.title': 'Writing Numbers',
+    'writingNumbers.subtitle': 'How do you write this number in words?',
+    'writingNumbers.roundsInfo': '10 rounds',
 
     // Counting game
     'counting.title': 'How Many?',
