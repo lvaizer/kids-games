@@ -104,6 +104,13 @@ This helps agents understand the game without reading all the code.
   - Score display
   - Game over/completion screen
   - Loading/start state
+- **CRITICAL: Responsive design for mobile and tablet**
+  - **Mobile-first approach**: Design for mobile (320px-600px) first, then tablet (601px-1024px), then desktop
+  - **Touch-friendly**: Buttons should be at least 44px x 44px for touch targets
+  - **Flexible layouts**: Use flexbox/grid with wrap for headers and button groups
+  - **Readable text**: Minimum 14px font size on mobile, 16px on tablet
+  - **Media queries**: Include `@media (max-width: 600px)` and `@media (max-width: 1024px)`
+  - **Test on real devices**: Every game must work perfectly on mobile and tablet
 - **Responsive design**: Use flexbox/grid for mobile-friendly layouts
 
 ### 9. State Management Pattern
@@ -164,6 +171,8 @@ import { playCheer, playSuccess } from '../../hooks/useSound';
 - [ ] **"התחל מחדש" button works during gameplay**
 - [ ] **"שנה רמה" button exists for games with difficulty levels**
 - [ ] **"שחק שוב" button works in game over screen**
+- [ ] **CRITICAL: Mobile responsive (320px-600px) - buttons, text, layout work perfectly**
+- [ ] **CRITICAL: Tablet responsive (601px-1024px) - all elements scale properly**
 - [ ] Language toggle works (if translations needed)
 - [ ] RTL/LTR display works correctly
 - [ ] README.md documents the game clearly

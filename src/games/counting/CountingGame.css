@@ -50,8 +50,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .counting-stat {
@@ -81,16 +82,38 @@
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
 }
 
 .counting-restart-btn:hover {
   background: #e67e22;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .counting-header {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .counting-stat {
+    padding: 6px 12px;
+  }
+  
+  .counting-stat .stat-value {
+    font-size: 16px;
+  }
+  
+  .counting-restart-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }
 
 /* Question area */

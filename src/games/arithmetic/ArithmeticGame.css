@@ -76,14 +76,14 @@
 /* Game Screen */
 .arithmetic-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 500px;
   margin-bottom: 40px;
   padding: 0 20px;
-  color: #2c3e50;
-  font-size: 1.2em;
-  font-weight: bold;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .arithmetic-progress,
@@ -102,19 +102,39 @@
   color: #2c3e50;
   border: 2px solid rgba(102, 126, 234, 0.2);
   border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px 12px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .arithmetic-restart-btn:hover,
 .arithmetic-change-level-btn:hover {
   background: rgba(102, 126, 234, 0.2);
   transform: translateY(-1px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .arithmetic-header {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .arithmetic-progress,
+  .arithmetic-mistakes {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+  
+  .arithmetic-restart-btn,
+  .arithmetic-change-level-btn {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
 }
 
 .arithmetic-question {
