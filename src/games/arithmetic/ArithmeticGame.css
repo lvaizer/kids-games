@@ -348,6 +348,13 @@
 
 /* Responsive Design */
 @media (max-width: 600px) {
+  .arithmetic-game {
+    padding: 10px;
+    min-height: auto;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
   .arithmetic-expression {
     font-size: 2em;
     padding: 20px;
