@@ -35,7 +35,7 @@ function HomePage() {
   const handleDownloadClick = async () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
+      await deferredPrompt.userChoice;
       setDeferredPrompt(null);
       setShowDownloadBtn(false);
     }
