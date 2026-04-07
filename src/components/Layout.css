@@ -5,6 +5,10 @@
   background: #f0f4ff;
 }
 
+.layout-arithmetic {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
 .layout-header {
   display: flex;
   align-items: center;
@@ -15,6 +19,12 @@
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.layout-header-arithmetic {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  backdrop-filter: blur(10px);
 }
 
 .home-button {
@@ -47,6 +57,10 @@
   flex: 1;
 }
 
+.app-title-arithmetic {
+  color: #2c3e50;
+}
+
 .lang-toggle-btn {
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -64,9 +78,33 @@
   background: rgba(255, 255, 255, 0.35);
 }
 
+.home-button-arithmetic {
+  background: rgba(102, 126, 234, 0.1);
+  color: #2c3e50;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.home-button-arithmetic:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.lang-toggle-btn-arithmetic {
+  background: rgba(102, 126, 234, 0.1);
+  color: #2c3e50;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.lang-toggle-btn-arithmetic:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
 .layout-content {
   flex: 1;
   padding: 16px;
+}
+
+.layout-content-arithmetic {
+  padding: 0;
 }
 
 /* Landscape — compact header to save vertical space */
