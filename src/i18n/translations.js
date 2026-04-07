@@ -6,6 +6,7 @@ const translations = {
 
     // HomePage
     'home.greeting': 'בחרו משחק!',
+    'home.download': 'הורידו את האפליקציה',
 
     // GamePage
     'game.notFound': 'המשחק לא נמצא',
@@ -88,6 +89,7 @@ const translations = {
 
     // HomePage
     'home.greeting': 'Choose a Game!',
+    'home.download': 'Download App',
 
     // GamePage
     'game.notFound': 'Game not found',
