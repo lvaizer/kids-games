@@ -280,19 +280,20 @@
 /* Tablet portrait */
 @media (max-width: 768px) and (orientation: portrait) {
   .memory-game {
-    max-width: 450px;
+    max-width: 100%;
+    padding: 0 10px;
   }
 
   .memory-board {
-    gap: 8px;
+    gap: 6px;
   }
 
   .card-emoji {
-    font-size: 34px;
+    font-size: 42px;
   }
 
   .card-front {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
@@ -335,15 +336,15 @@
   }
 
   .memory-board {
-    gap: 5px;
+    gap: 4px;
   }
 
   .card-emoji {
-    font-size: 4vh;
+    font-size: 6vh;
   }
 
   .card-front {
-    font-size: 3vh;
+    font-size: 4vh;
   }
 
   .win-banner {
@@ -396,15 +397,15 @@
   }
 
   .memory-board {
-    gap: 6px;
+    gap: 4px;
   }
 
   .card-emoji {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .card-front {
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 8px;
   }
 

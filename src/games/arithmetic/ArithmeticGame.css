@@ -1,0 +1,326 @@
+.arithmetic-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.arithmetic-game h2 {
+  font-size: 3em;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.arithmetic-subtitle {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Start Screen */
+.arithmetic-levels {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.arithmetic-level-btn {
+  padding: 15px 40px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arithmetic-level-btn:first-child {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.arithmetic-level-btn:nth-child(2) {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.arithmetic-level-btn:nth-child(3) {
+  background: linear-gradient(135deg, #30b0fe 0%, #4834d4 100%);
+}
+
+.arithmetic-level-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.arithmetic-level-btn:active {
+  transform: translateY(-1px);
+}
+
+.arithmetic-info {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1em;
+}
+
+/* Game Screen */
+.arithmetic-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.arithmetic-progress,
+.arithmetic-mistakes {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.arithmetic-question {
+  margin-bottom: 50px;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.arithmetic-expression {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.arithmetic-expression .number,
+.arithmetic-expression .question-mark {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 25px;
+  border-radius: 15px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.arithmetic-expression .operator,
+.arithmetic-expression .equals {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Options Grid */
+.arithmetic-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.arithmetic-option {
+  padding: 25px;
+  font-size: 1.8em;
+  font-weight: bold;
+  border: 3px solid white;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.arithmetic-option:hover:not(:disabled) {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arithmetic-option:disabled {
+  cursor: not-allowed;
+}
+
+.arithmetic-option.correct {
+  background: #43e97b;
+  border-color: #43e97b;
+  animation: correctPulse 0.6s ease;
+}
+
+.arithmetic-option.wrong {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+  animation: wrongShake 0.5s ease;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wrongShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.arithmetic-feedback {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Game Over Screen */
+.arithmetic-win {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px 30px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+}
+
+.arithmetic-win h2 {
+  margin-bottom: 30px;
+}
+
+.arithmetic-score {
+  font-size: 1.8em;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.new-record-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.arithmetic-restart-btn,
+.arithmetic-home-btn {
+  padding: 15px 40px;
+  margin: 10px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.arithmetic-restart-btn {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  margin-right: 10px;
+}
+
+.arithmetic-home-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-left: 10px;
+}
+
+.arithmetic-restart-btn:hover,
+.arithmetic-home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arithmetic-restart-btn:active,
+.arithmetic-home-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .arithmetic-expression {
+    font-size: 2em;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .arithmetic-expression .number,
+  .arithmetic-expression .question-mark {
+    min-width: 60px;
+    padding: 10px 15px;
+  }
+
+  .arithmetic-option {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+
+  .arithmetic-game h2 {
+    font-size: 2em;
+  }
+
+  .arithmetic-level-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+  }
+}

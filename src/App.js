@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import MemoryGame from './games/memory/MemoryGame';
 import CountingGame from './games/counting/CountingGame';
 import WritingNumbersGame from './games/writing-numbers/WritingNumbersGame';
+import ArithmeticGame from './games/arithmetic/ArithmeticGame';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="games/memory" element={<MemoryGame />} />
             <Route path="games/counting" element={<CountingGame />} />
             <Route path="games/writing-numbers" element={<WritingNumbersGame />} />
+            <Route path="games/arithmetic" element={<ArithmeticGame />} />
           </Route>
         </Routes>
       </BrowserRouter>

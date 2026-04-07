@@ -16,6 +16,7 @@ const translations = {
     'game.puzzle': 'פאזל',
     'game.coloring': 'צביעה',
     'game.counting': 'כמה יש?',
+    'game.arithmetic': 'חשבון בסיסי',
     'game.math': 'חידון חשבון',
     'game.spelling': 'איות',
     'game.matching': 'התאמה',
@@ -56,6 +57,14 @@ const translations = {
     'counting.totalMistakes': 'סך טעויות',
     'counting.bestScore': 'שיא',
 
+    // Arithmetic game
+    'arithmetic.title': 'חשבון בסיסי',
+    'arithmetic.subtitle': 'פתרו את התרגילים הפשוטים!',
+    'arithmetic.easy': 'קל - חיבור',
+    'arithmetic.medium': 'בינוני - חיסור',
+    'arithmetic.hard': 'קשה - מעורבב',
+    'arithmetic.roundsInfo': '10 סיבובים',
+
     // Animals
     'animal.Dog': 'כלב',
     'animal.Cat': 'חתול',
@@ -89,6 +98,7 @@ const translations = {
     'game.puzzle': 'Puzzle',
     'game.coloring': 'Coloring',
     'game.counting': 'How Many?',
+    'game.arithmetic': 'Basic Arithmetic',
     'game.math': 'Math Quiz',
     'game.spelling': 'Spelling',
     'game.matching': 'Matching',
@@ -128,6 +138,14 @@ const translations = {
     'counting.finished': 'Great job!',
     'counting.totalMistakes': 'Total mistakes',
     'counting.bestScore': 'Best',
+
+    // Arithmetic game
+    'arithmetic.title': 'Basic Arithmetic',
+    'arithmetic.subtitle': 'Solve the simple equations!',
+    'arithmetic.easy': 'Easy - Addition',
+    'arithmetic.medium': 'Medium - Subtraction',
+    'arithmetic.hard': 'Hard - Mixed',
+    'arithmetic.roundsInfo': '10 rounds',
 
     // Animals
     'animal.Dog': 'Dog',
