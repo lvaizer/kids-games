@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback } from 'react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
