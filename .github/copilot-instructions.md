@@ -35,6 +35,40 @@ All games in this project follow a consistent architecture for educational child
   - Standard pattern: 150 particles with 80° spread, then 100 particles with 100° spread at 300ms delay
 - **Visual feedback**: Show correct answer when wrong, but allow player to see it before moving to next round
 
+### 4.5. Navigation & Control Buttons
+**All games must include these control buttons:**
+
+- **"התחל מחדש" (Restart) button** - During gameplay, resets the current game session
+  - Located in game header next to stats
+  - Styled with orange color (#f39c12) and hover effect
+  - Uses `t('memory.restart')` translation key
+
+- **"שנה רמה" (Change Level) button** - For games with difficulty levels only
+  - Located in game header next to restart button
+  - Returns to difficulty selection screen
+  - Styled with blue color and hover effect
+  - Uses `t('memory.changeLevel')` translation key
+
+- **"שחק שוב" (Play Again) button** - In game over screen
+  - Restarts the same game/difficulty
+  - Uses `t('memory.playAgain')` translation key
+
+**Button placement pattern:**
+```javascript
+<div className="game-header">
+  <div className="game-stat">...</div>
+  <div className="game-stat">...</div>
+  <button className="game-restart-btn" onClick={startGame}>
+    {t('memory.restart')}
+  </button>
+  {hasDifficulty && (
+    <button className="game-change-level-btn" onClick={() => setDifficulty(null)}>
+      {t('memory.changeLevel')}
+    </button>
+  )}
+</div>
+```
+
 ### 5. Internationalization
 - **Language support**: Use `useLanguage()` hook from `src/i18n/LanguageContext`
 - **Translations**:
@@ -127,6 +161,9 @@ import { playCheer, playSuccess } from '../../hooks/useSound';
 - [ ] Best score saves to localStorage
 - [ ] Best score updates only when beaten
 - [ ] Game completion shows confetti and cheer sound
+- [ ] **"התחל מחדש" button works during gameplay**
+- [ ] **"שנה רמה" button exists for games with difficulty levels**
+- [ ] **"שחק שוב" button works in game over screen**
 - [ ] Language toggle works (if translations needed)
 - [ ] RTL/LTR display works correctly
 - [ ] README.md documents the game clearly
