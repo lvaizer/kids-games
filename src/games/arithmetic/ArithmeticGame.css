@@ -13,6 +13,7 @@
   color: #2c3e50;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  animation: titleBounce 0.8s ease-out;
 }
 
 .arithmetic-subtitle {
@@ -20,6 +21,7 @@
   color: #34495e;
   margin-bottom: 40px;
   text-align: center;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
 /* Start Screen */
@@ -30,6 +32,14 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.arithmetic-levels > * {
+  animation: buttonPopIn 0.5s ease-out both;
+}
+
+.arithmetic-levels > *:nth-child(1) { animation-delay: 0.5s; }
+.arithmetic-levels > *:nth-child(2) { animation-delay: 0.7s; }
+.arithmetic-levels > *:nth-child(3) { animation-delay: 0.9s; }
 
 .arithmetic-level-btn {
   padding: 15px 40px;
@@ -84,6 +94,7 @@
   padding: 0 20px;
   gap: 12px;
   flex-wrap: wrap;
+  animation: slideInLeft 0.6s ease-out;
 }
 
 .arithmetic-progress,
@@ -166,6 +177,7 @@
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 0.6s ease-out 0.3s both;
 }
 
 .arithmetic-expression .number,
@@ -192,7 +204,17 @@
   width: 100%;
   max-width: 400px;
   margin-bottom: 30px;
+  animation: fadeInUp 0.6s ease-out 0.5s both;
 }
+
+.arithmetic-options > * {
+  animation: optionBounce 0.5s ease-out both;
+}
+
+.arithmetic-options > *:nth-child(1) { animation-delay: 0.6s; }
+.arithmetic-options > *:nth-child(2) { animation-delay: 0.7s; }
+.arithmetic-options > *:nth-child(3) { animation-delay: 0.8s; }
+.arithmetic-options > *:nth-child(4) { animation-delay: 0.9s; }
 
 .arithmetic-option {
   padding: 25px;
@@ -379,5 +401,87 @@
   .arithmetic-level-btn {
     padding: 12px 30px;
     font-size: 1.1em;
+  }
+}
+
+/* New entrance animations */
+@keyframes titleBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(180deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes optionBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }

@@ -8,12 +8,56 @@
   font-size: 28px;
   color: #333;
   margin: 8px 0 24px;
+  animation: bounceInDown 0.8s ease-out;
 }
 
 .games-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+/* Entrance animations for game cards */
+.games-grid > * {
+  animation: bounceInUp 0.6s ease-out both;
+}
+
+.games-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.games-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.games-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.games-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.games-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.games-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Keyframe animations */
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Tablet landscape — use horizontal space, show all games in one row or two */
