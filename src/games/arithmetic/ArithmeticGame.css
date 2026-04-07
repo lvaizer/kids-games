@@ -5,20 +5,20 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   font-family: 'Arial', sans-serif;
 }
 
 .arithmetic-game h2 {
   font-size: 3em;
-  color: white;
+  color: #2c3e50;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .arithmetic-subtitle {
   font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.9);
+  color: #34495e;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -40,20 +40,23 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: bold;
-  color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #2c3e50;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .arithmetic-level-btn:first-child {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #2c3e50;
 }
 
 .arithmetic-level-btn:nth-child(2) {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  color: #2c3e50;
 }
 
 .arithmetic-level-btn:nth-child(3) {
-  background: linear-gradient(135deg, #30b0fe 0%, #4834d4 100%);
+  background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%);
+  color: #2c3e50;
 }
 
 .arithmetic-level-btn:hover {
@@ -67,7 +70,7 @@
 
 .arithmetic-info {
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: #34495e;
   font-size: 1.1em;
 }
 
@@ -79,17 +82,19 @@
   max-width: 500px;
   margin-bottom: 40px;
   padding: 0 20px;
-  color: white;
+  color: #2c3e50;
   font-size: 1.2em;
   font-weight: bold;
 }
 
 .arithmetic-progress,
 .arithmetic-mistakes {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px 20px;
   border-radius: 15px;
   backdrop-filter: blur(10px);
+  color: #2c3e50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .arithmetic-question {
@@ -114,26 +119,29 @@
   gap: 15px;
   font-size: 3em;
   font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 0.1);
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   padding: 30px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .arithmetic-expression .number,
 .arithmetic-expression .question-mark {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(102, 126, 234, 0.1);
   padding: 15px 25px;
   border-radius: 15px;
   min-width: 80px;
   text-align: center;
+  color: #2c3e50;
+  border: 2px solid rgba(102, 126, 234, 0.2);
 }
 
 .arithmetic-expression .operator,
 .arithmetic-expression .equals {
-  color: rgba(255, 255, 255, 0.8);
+  color: #667eea;
 }
 
 /* Options Grid */
@@ -150,13 +158,14 @@
   padding: 25px;
   font-size: 1.8em;
   font-weight: bold;
-  border: 3px solid white;
+  border: 3px solid #667eea;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .arithmetic-option:hover:not(:disabled) {
@@ -206,7 +215,7 @@
 }
 
 .arithmetic-feedback {
-  color: white;
+  color: #e74c3c;
   font-size: 1.1em;
   font-weight: bold;
   animation: fadeIn 0.5s ease;
@@ -224,20 +233,22 @@
 /* Game Over Screen */
 .arithmetic-win {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   padding: 50px 30px;
   border-radius: 30px;
   backdrop-filter: blur(10px);
   max-width: 500px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .arithmetic-win h2 {
   margin-bottom: 30px;
+  color: #2c3e50;
 }
 
 .arithmetic-score {
   font-size: 1.8em;
-  color: white;
+  color: #34495e;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -271,18 +282,17 @@
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
-  color: white;
+  color: #2c3e50;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .arithmetic-restart-btn {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  margin-right: 10px;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .arithmetic-home-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  margin-left: 10px;
+  background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%);
 }
 
 .arithmetic-restart-btn:hover,
