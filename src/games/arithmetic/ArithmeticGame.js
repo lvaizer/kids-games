@@ -190,6 +190,12 @@ function ArithmeticGame() {
         <div className="arithmetic-mistakes">
           {t('counting.mistakesLabel')}: {totalMistakes}
         </div>
+        <button className="arithmetic-restart-btn" onClick={() => startGame(difficulty)}>
+          {t('memory.restart')}
+        </button>
+        <button className="arithmetic-change-level-btn" onClick={() => setDifficulty(null)}>
+          {t('memory.changeLevel')}
+        </button>
       </div>
 
       <div className="arithmetic-question">

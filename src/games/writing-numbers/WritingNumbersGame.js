@@ -167,6 +167,9 @@ function WritingNumbersGame() {
           <span className="stat-label">{t('counting.mistakesLabel')}</span>
           <span className="stat-value">{totalMistakes}</span>
         </div>
+        <button className="wn-restart-btn" onClick={startGame}>
+          {t('memory.restart')}
+        </button>
       </div>
 
       <div className="wn-question">
